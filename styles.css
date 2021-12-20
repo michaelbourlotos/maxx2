@@ -1,7 +1,16 @@
 :root {
-    --black:#3D3D3D;
-    --blue:#0D4B6E;
-    --red:#BB1F25;
+    --background: white;
+    --primary:#3D3D3D;
+    --secondary:#0D4B6E;
+    --accent:#BB1F25;
+}
+
+[data-theme="dark"] {
+  --background:#3d3d3d;
+  --primary: #9A97F3;
+  --secondary: #818cab;
+  --accent: #BB1F25;
+ 
 }
 
 /* fonts
@@ -45,7 +54,8 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: 'Roboto', sans-serif;
-  color: var(--black);
+  color: var(--primary);
+  background-color:var(--background);
 }
 
 /* A elements that don't have a class get default styles */
@@ -83,6 +93,66 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* dark theme button  */
+.dark__mode__container {
+  display: flex;
+  align-items: center;
+}
+.dark__mode__container em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+.dark-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.dark-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -90,6 +160,9 @@ select {
 }
 .header__logo{
     height: 4rem;
+}
+.header h2 {
+  text-transform: uppercase;
 }
 
 
@@ -129,13 +202,13 @@ select {
     line-height: 1.25rem;
 }
 .portfolio__item__text hr {
-    border: 1px solid var(--blue);
+    border: 1px solid var(--secondary);
 }
 .portfolio__item__text hr:first-child{
-    border: 1px solid var(--blue);
+    border: 1px solid var(--secondary);
 }
 .portfolio__item__text hr:last-child{
-    border: 3px solid var(--blue);
+    border: 3px solid var(--secondary);
 }
 .portfolio__item__text h2{
     font-weight: 300;
@@ -144,7 +217,7 @@ select {
     text-decoration: none;
     font-family: 'Baskervville', serif;
     font-style: italic;
-    color: var(--red);
+    color: var(--accent);
     font-size: 1.25rem;
 }
 
@@ -163,10 +236,15 @@ select {
 
 .footer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     height: 7rem;
-    background-color: var(--black);
+    background-color: var(--primary);
     color:azure;
     margin-top: 2rem;
+}
+.footer__text span {
+  text-decoration: underline;
 }
