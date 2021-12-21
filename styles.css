@@ -101,7 +101,7 @@ select {
 }
 .dark__mode__container em {
   margin-left: 10px;
-  font-size: 1rem;
+  font-size: .75rem;
 }
 .dark-switch {
   display: inline-block;
