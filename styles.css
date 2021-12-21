@@ -1,5 +1,5 @@
 :root {
-    --background: white;
+    --background: #ffffff;
     --primary:#3D3D3D;
     --secondary:#0D4B6E;
     --accent:#BB1F25;
@@ -7,9 +7,9 @@
 
 [data-theme="dark"] {
   --background:#3d3d3d;
-  --primary: #9A97F3;
-  --secondary: #818cab;
-  --accent: #BB1F25;
+  --primary: #f1f1f1;
+  --secondary: #3e87e7;
+  --accent: #E24C51;
  
 }
 
@@ -242,7 +242,7 @@ input:checked + .slider:before {
     gap: 1rem;
     height: 7rem;
     background-color: var(--primary);
-    color:azure;
+    color:var(--background);
     margin-top: 2rem;
 }
 .footer__text span {
