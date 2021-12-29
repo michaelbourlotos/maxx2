@@ -3,6 +3,7 @@
     --primary:#3D3D3D;
     --secondary:#0D4B6E;
     --accent:#BB1F25;
+    --theme: "LIGHT MODE"
 }
 
 [data-theme="dark"] {
@@ -10,7 +11,7 @@
   --primary: #87b6a4;
   --secondary: #6b6c94;
   --accent: #E24C51;
- 
+  --theme: "DARK MODE"
 }
 
 /* fonts
@@ -108,6 +109,9 @@ select {
   margin-left: 10px;
   font-size: .75rem;
 }
+.dark__mode__container em:before{
+  content: var(--theme);
+}
 .dark-switch {
   display: inline-block;
   height: 17px;
@@ -168,6 +172,9 @@ input:checked + .slider:before {
   .header {
     text-align: center;
     justify-content: center;
+  }
+  .header__text {
+    margin-top: 20px;
   }
 }
 
@@ -255,7 +262,7 @@ input:checked + .slider:before {
     align-items: center;
     gap: 1rem;
     height: 7rem;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     color:var(--background);
     margin-top: 2rem;
 }
