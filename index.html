@@ -15,14 +15,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-   
     <header class="header">
       <img
         class="header__logo"
         src="images/company-logo.png"
         alt="Maxx Potential Logo"
       />
-    
+
       <div class="header__text">
         <h2>Hello, I'm Michael</h2>
         <p>Web Designer</p>
@@ -30,7 +29,15 @@
       
     </header>
     <section class="hero">
-      <div class="hero__image"></div>
+      <div class="hero__image">
+        <div class="dark__mode__container">
+          <label class="dark-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+          <em>DARK MODE</em>
+        </div>
+      </div>
     </section>
 
     <section class="portfolio">
@@ -78,13 +85,7 @@
       <div class="footer__text">
         <p>©2021 <span>Michael's Web Dev</span> All Rights Reserved.</p>
       </div>
-      <div class="dark__mode__container">
-        <label class="dark-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-      </label>
-      <em>DARK MODE</em>
-    </div>
+      
     </footer>
     <script src="darkTheme.js"></script>
   </body>
